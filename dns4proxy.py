@@ -38,6 +38,14 @@ class MyResolver(BaseResolver):
             # convert matched groups to IP format
             parsed_ip = ".".join(match_group.groups())
 
+            # validate the parsed IP
+            try:
+                ip_address(parsed_ip)
+            except Exception:
+                # If the IP address is invalid, return an NXDOMAIN response
+                reply.header.rcode = RCODE.NXDOMAIN
+                return reply
+
             for direct_network in direct_networks:
                 if client_ip in direct_network:
                     reply.add_answer(RR(qname, QTYPE.A, rdata=A(parsed_ip), ttl=60))
