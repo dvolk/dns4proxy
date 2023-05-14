@@ -19,5 +19,7 @@ You can use nginx to parse the IP from the hostname and proxy the traffic to the
 # Configuration example
 
 ```
-DNS4PROXY_DIRECT_NETWORKS="192.168.0.0/24,192.168.1.0/24" DNS4PROXY_PROXIES="10.0.0.1,10.0.0.2,10.0.0.3" DNS4PROXY_DOMAIN_REGEX="^(\d+)-(\d+)-(\d+)-(\d+)\.dynamic\.yourdomain\.com\.$"
+DNS4PROXY_DIRECT_NETWORKS="192.168.0.0/24,192.168.1.0/24"
+DNS4PROXY_PROXIES="10.0.0.1,10.0.0.2,10.0.0.3"
+DNS4PROXY_DOMAIN_REGEX="^(\d+)-(\d+)-(\d+)-(\d+)\.dynamic\.yourdomain\.com\.$"
 ```
