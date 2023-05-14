@@ -10,7 +10,7 @@ If you want to access many hosts behind a firewall, you can set up public nginx 
 
 But if the client is also behind the firewall, you'd prefer to connect directly
 
-In the example below, if you're behind the firewall (direct networks), 1-2-3-4.dynamic.yourdomain.com will return 1.2.3.4
+In the example below, if you're behind the firewall (direct networks), `1-2-3-4.dynamic.yourdomain.com` will return `1.2.3.4`
 
 but if you're in front of the firewall, it will return one of the proxies.
 
